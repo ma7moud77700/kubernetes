@@ -1,0 +1,78 @@
+git clone "https git repo"
+git remote -v
+git status
+git add "file name"
+git reset head "file name"
+git restore --staged "file name"
+git restore --staged *
+git clean -n              #ask to clean all unstaged file 
+git clean -f               #clean all unstaged file without ask
+git commit -m "message"
+git push origin main
+git pull origin BranchName
+git config --list , git config -l
+git config --global user.name "username"
+git config --global user.email "email"
+git config --global -- unset user.name
+git config --global --edit
+git config --global alias.st status
+git st
+git config --global alias.br branch
+git br
+git config --global alias.cm "commit -m"
+git cm "message"
+git log
+git reset --hard 25573e26694ccbfc     #commit hash name to delete commits after this hash
+git push origin main --force             # to update now
+
+--------------------------------------------------------------------
+ssh-keygen   -t rsa -b 4096  -c "email"
+cat ~/.ssh/id_rsa.pub
+ssh -T git@github.com
+git init
+git add README.md
+git commit -m "frist commit"
+git remote add origin git@github.com:Username/RepoName.git
+git push -u origin main
+--------------------------------------------------------------------
+git branch
+git branch NewBranchName
+git checkout NewBranchName 
+git branch -d BranchName
+git branch -D BranchName
+git branch -b NewBranchName
+git branch -m changeBranchName
+--------------------------------------------------------------------
+git add *                                         #add all files on the stage
+git stash save "message"             # saving the file in stash box to use them later
+git stash list               	                  # show stash boxs list
+git stash pop             	                  # get file back to use and delete the stash box
+git stash pop stash@{num}       # get file from choosn stash and delete the stash box
+git stash apply 	                  # get file back from stash box without delete box
+git stash apply stash@{num}    # get file from choosn stash without delete box
+git stash drop  stash@{num}    # delete stash with all files
+git stash show 	                   # show stash contain
+git stash show stash@{num}     #show chossen stash
+git clear 			#clear all stash
+----------------------------------------------------------------------
+.gitignore
+visual code open .gitignore
+*.log     # ignore all file .log
+!name.log # add only name.log
+folder_name  # ignore folder_name with all file in it
+text.txt    #ignore text.txt
+git add -f "name of file or folder " # force add that file or folder even it on .ignore
+---------------------------------------------------------------------
+git commit -m "messeage
+git tag v1.0
+git tag          #show tag
+git push origin v1.0
+----------
+git commit -m "messeage"
+git push origin main
+git tag -a v2.0 -m "NewMessage"
+git push origin v2.0
+----------
+git tag -l "v1.*" 		# list all tag start with v1
+git tag -d v1.0   		# delete tag v1.0 locally
+git push origin --delete v1.0        #delete tag v1.0 from remotly
